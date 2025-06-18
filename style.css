@@ -52,45 +52,46 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* SECTION ACCUEIL (HERO) */
-.hero {
-  background-image: url('images/drone-shot-1.jpg'); /* à personnaliser */
+/* HERO (ACCUEIL IMMERSIF) */
+.home-hero {
   height: 100vh;
+  background-image: url('images/drone-shot-1.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+.home-hero .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
   height: 100%;
   width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   color: white;
   text-align: center;
   z-index: 1;
+  padding: 2rem;
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
 }
 
 .hero-text p {
   font-size: 1.5rem;
-  opacity: 0.9;
+  margin-top: 1rem;
+  opacity: 0.85;
 }
 
-/* BOUTON CTA */
 .cta-btn {
   margin-top: 1.5rem;
   display: inline-block;
@@ -127,30 +128,7 @@ section p {
   margin: auto;
 }
 
-/* GALERIE PORTFOLIO */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 0 1rem;
-}
-
-.grid img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-/* FOOTER */
-footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
-
+/* SECTION À PROPOS PERSONNALISÉE */
 .apropos {
   background-color: #111;
   color: white;
@@ -206,4 +184,38 @@ footer {
     max-width: 400px;
     border-radius: 8px;
   }
+}
+
+/* PORTFOLIO GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* SECTION CONTACT */
+#contact a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
 }
