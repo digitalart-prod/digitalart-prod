@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Art Production</title>
+
+  <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS CSS (animations on scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- MENU FIXE AVEC LOGO -->
+  <!-- MENU AVEC LOGO -->
   <nav>
     <div class="nav-container">
       <img src="images/logo.png" alt="Logo Digital Art Production" class="logo" />
@@ -20,8 +25,8 @@
     </div>
   </nav>
 
-  <!-- SECTION ACCUEIL -->
-  <div class="hero" id="accueil">
+  <!-- PAGE D’ACCUEIL (style spécial) -->
+  <div class="hero home-hero" id="accueil">
     <div class="overlay"></div>
     <div class="hero-text">
       <h1>Digital Art Production</h1>
@@ -31,61 +36,31 @@
   </div>
 
   <!-- SECTION À PROPOS -->
- <section id="apropos" class="apropos">
-  <div class="apropos-container">
-    <img src="images/profic.pic" alt="Photo de profil" class="apropos-photo" />
-    <div class="apropos-text">
-      <h2>À propos</h2>
-      <p>
-        Amoureux de montagne, de grands espaces et de sensations fortes, j’ai débuté la vidéo en capturant la beauté brute de la nature qui m’entourait. Ma passion pour l’image m’a conduit à explorer l’univers du drone, puis à me spécialiser dans le pilotage FPV, une technologie immersive et en pleine expansion.
-
-        Avec le temps et l’expérience, j’ai fait de cette passion un véritable métier d’avenir. J’ai fondé Digital Art Production pour allier création visuelle, narration dynamique et technologies innovantes comme le drone FPV, au service de projets inspirants.
-
-        Je réalise aujourd’hui des contenus authentiques et percutants, pour des marques, des événements, des aventures sportives ou des destinations touristiques. Mon objectif : raconter des histoires puissantes, depuis les airs comme au sol, avec une approche technique, esthétique et humaine.
-
-        Basé entre la France et l’Australie, je me déplace partout où les projets me mènent. N’hésitez pas à me contacter, chaque nouveau défi est une opportunité de créer quelque chose d’unique.
-
-      </p>
+  <section id="apropos" class="apropos" data-aos="fade-up">
+    <div class="apropos-container">
+      <img src="images/profic.pic" alt="Photo de profil" class="apropos-photo" />
+      <div class="apropos-text">
+        <h2>À propos</h2>
+        <p>
+          Je m'appelle Victor. Passionné par la vidéo, le drone et l’exploration, je capture des instants vrais et visuellement forts. 
+          J’ai appris en autodidacte, caméra à la main et sac sur le dos. Aujourd’hui, je transforme mes voyages, mes rencontres et mes projets clients en images percutantes, sincères et naturelles.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- SECTION PORTFOLIO -->
-  <section id="portfolio">
+  <section id="portfolio" data-aos="fade-up">
     <h2>Portfolio</h2>
-    <p>Voici quelques aperçus de mes projets récents :</p>
+    <p data-aos="fade" data-aos-delay="100">Voici quelques aperçus de mes projets récents :</p>
     <div class="grid">
-      <img src="images/drone-shot-1.jpg" alt="Projet drone 1" />
-      <img src="https://via.placeholder.com/400x250" alt="Projet 2" />
-      <img src="https://via.placeholder.com/400x250" alt="Projet 3" />
+      <img src="images/drone-shot-1.jpg" alt="Projet drone 1" data-aos="zoom-in" />
+      <img src="https://via.placeholder.com/400x250" alt="Projet 2" data-aos="zoom-in" />
+      <img src="https://via.placeholder.com/400x250" alt="Projet 3" data-aos="zoom-in" />
     </div>
   </section>
 
   <!-- SECTION CONTACT -->
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>📩 <a href="mailto:contact@digitalart-production.fr">contact@digitalart-production.fr</a></p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Digital Art Production — Tous droits réservés</p>
-  </footer>
-
-  <!-- SCROLL DOUX JS -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 60,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+    <p>📩 <a href="mailto:co
