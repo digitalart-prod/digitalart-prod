@@ -1,81 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Art Production</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- MENU DE NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-body, html {
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-}
+  <!-- ACCUEIL (Image de fond) -->
+  <div class="hero" id="accueil">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Digital Art Production</h1>
+      <p>Photographie • Vidéo • Drone FPV</p>
+    </div>
+  </div>
 
-/* Image plein écran */
-.hero {
-  background-image: url('images/drone-shot-1.jpg');
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Je suis vidéaste, photographe et pilote de drone passionné. Je capture des moments uniques, des paysages aériens et des histoires visuelles puissantes.</p>
+  </section>
 
-/* Overlay noir semi-transparent */
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Voici quelques aperçus de mes projets récents.</p>
+    <div class="grid">
+      <img src="images/drone-shot-1.jpg" alt="Projet 1">
+      <img src="https://via.placeholder.com/400x250" alt="Projet 2">
+      <img src="https://via.placeholder.com/400x250" alt="Projet 3">
+    </div>
+  </section>
 
-/* Texte centré */
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 1;
-}
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📩 <a href="mailto:contact@digitalart-production.fr">contact@digitalart-production.fr</a></p>
+  </section>
 
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  opacity: 0.9;
-}
-nav {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  margin: 0;
-}
-
-nav ul li {
-  margin: 0 1.5rem;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Digital Art Production — Tous droits réservés</p>
+  </footer>
+</body>
+</html>
