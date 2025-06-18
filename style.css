@@ -132,34 +132,36 @@ section p {
 .apropos {
   background-color: #111;
   color: white;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 }
 
 .apropos-container {
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 0 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.apropos-photo-container {
+  flex: 1;
+  max-width: 400px;
 }
 
 .apropos-photo {
   width: 100%;
-  max-width: 600px;
-  height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
 .apropos-text {
-  max-width: 900px;
-  padding: 0 1rem;
+  flex: 2;
   text-align: center;
 }
 
 .apropos-text h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -171,18 +173,13 @@ section p {
 @media (min-width: 900px) {
   .apropos-container {
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 0 4rem;
+    justify-content: center;
   }
 
   .apropos-text {
     text-align: left;
-  }
-
-  .apropos-photo {
-    max-width: 400px;
-    border-radius: 8px;
+    padding-left: 2rem;
   }
 }
 
