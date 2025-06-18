@@ -219,3 +219,26 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.9rem;
 }
+.portfolio-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.portfolio-btn {
+  display: inline-block;
+  background-color: #111;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
