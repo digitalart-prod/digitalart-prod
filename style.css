@@ -11,7 +11,7 @@ body, html {
 
 /* Image plein écran */
 .hero {
-  background-image: url('images/Drone shot 1.jpg');
+  background-image: url('images/drone-shot-1.jpg');
   height: 100vh;
   background-position: center;
   background-size: cover;
