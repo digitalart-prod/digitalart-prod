@@ -4,63 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Art Production</title>
-
-  <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- AOS CSS (animations on scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- MENU AVEC LOGO -->
-  <nav>
-    <div class="nav-container">
-      <img src="images/logo.png" alt="Logo Digital Art Production" class="logo" />
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- PAGE D’ACCUEIL (style spécial) -->
-  <div class="hero home-hero" id="accueil">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h1>Digital Art Production</h1>
-      <p>Photographie • Vidéo • Drone FPV</p>
-      <a href="#portfolio" class="cta-btn">Découvrir mon travail</a>
+  <!-- MENU -->
+  <header>
+    <div class="container">
+      <img src="images/logo.png" alt="Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- SECTION À PROPOS -->
-  <section id="apropos" class="apropos" data-aos="fade-up">
-    <div class="apropos-container">
-      <img src="images/profic.pic" alt="Photo de profil" class="apropos-photo" />
-      <div class="apropos-text">
-        <h2>À propos</h2>
-        <p>
-          Je m'appelle Victor. Passionné par la vidéo, le drone et l’exploration, je capture des instants vrais et visuellement forts. 
-          J’ai appris en autodidacte, caméra à la main et sac sur le dos. Aujourd’hui, je transforme mes voyages, mes rencontres et mes projets clients en images percutantes, sincères et naturelles.
-        </p>
-      </div>
+  <!-- ACCUEIL -->
+  <section id="accueil" class="hero">
+    <h1>Bienvenue chez Digital Art Production</h1>
+    <p>Photographe, vidéaste & pilote de drone</p>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="apropos" class="section">
+    <h2>À propos</h2>
+    <p>Je suis passionné par l’image, le mouvement et l’émotion. J'utilise la photo, la vidéo et le drone pour raconter des histoires uniques, qu’elles soient personnelles, artistiques ou professionnelles.</p>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="section">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="images/photo1.jpg" alt="Projet 1" />
+      <img src="images/photo2.jpg" alt="Projet 2" />
+      <img src="images/photo3.jpg" alt="Projet 3" />
     </div>
   </section>
 
-  <!-- SECTION PORTFOLIO -->
-  <section id="portfolio" data-aos="fade-up">
-    <h2>Portfolio</h2>
-    <p data-aos="fade" data-aos-delay="100">Voici quelques aperçus de mes projets récents :</p>
-    <div class="grid">
-      <img src="images/drone-shot-1.jpg" alt="Projet drone 1" data-aos="zoom-in" />
-      <img src="https://via.placeholder.com/400x250" alt="Projet 2" data-aos="zoom-in" />
-      <img src="https://via.placeholder.com/400x250" alt="Projet 3" data-aos="zoom-in" />
-    </div>
-  </section>
-
-  <!-- SECTION CONTACT -->
-  <section id="contact" data-aos="fade-up">
+  <!-- CONTACT -->
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <p>📩 <a href="mailto:co
+    <p>📩 <a href="mailto:contact@digitalart-production.fr">contact@digitalart-production.fr</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Digital Art Production</p>
+  </footer>
+
+</body>
+</html>
