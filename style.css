@@ -112,8 +112,8 @@ nav ul li a:hover {
 section {
   width: 100%;
   padding: 5rem 2rem;
-  background-color: #111; /* Gris anthracite */
-  color: white;
+  background-color: #222222
+  color: #0a0a0a;
 }
 
 section h2 {
@@ -136,7 +136,7 @@ section p {
 
 /* SECTION À PROPOS PERSONNALISÉE */
 .apropos {
-  background-color: #111;
+  background-color: ##222222;
   color: white;
   padding: 5rem 2rem;
 }
@@ -206,7 +206,7 @@ section p {
 
 /* SECTION CONTACT */
 #contact a {
-  color: #111;
+  color: ##222222;
   text-decoration: none;
 }
 
@@ -216,7 +216,7 @@ section p {
 
 /* FOOTER */
 footer {
-  background-color: #111;
+  background-color: ##222222;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
@@ -232,7 +232,7 @@ footer {
 
 .portfolio-btn {
   display: inline-block;
-  background-color: #111;
+  background-color: ##222222;
   color: white;
   padding: 1rem 2rem;
   font-size: 1.2rem;
