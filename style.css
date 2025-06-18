@@ -1,26 +1,33 @@
-body {
-  font-family: Arial, sans-serif;
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
-  background: #fff;
+  scroll-behavior: smooth;
 }
 
-header {
-  background: #000;
-  color: #fff;
-  padding: 1rem 0;
-  position: sticky;
+/* MENU FIXE */
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
-.container {
-  max-width: 1000px;
+.nav-container {
+  max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0.8rem 2rem;
 }
 
 .logo {
@@ -30,51 +37,185 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-nav a {
+nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-.hero {
-  height: 80vh;
-  background: #111 center / cover no-repeat;
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* HERO (ACCUEIL IMMERSIF) */
+.home-hero {
+  height: 100vh;
+  background-image: url('images/drone-shot-1.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.home-hero .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: relative;
   color: white;
   text-align: center;
+  z-index: 1;
   padding: 2rem;
 }
 
-.section {
-  max-width: 800px;
+.hero-text h1 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+.cta-btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e6b800;
+}
+
+/* SECTIONS GÉNÉRALES */
+section {
+  max-width: 960px;
   margin: auto;
-  padding: 4rem 1rem;
+  padding: 5rem 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.gallery {
+section p {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* SECTION À PROPOS PERSONNALISÉE */
+.apropos {
+  background-color: #111;
+  color: white;
+  padding: 5rem 0;
+}
+
+.apropos-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.apropos-photo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.apropos-text {
+  max-width: 900px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.apropos-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.apropos-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 900px) {
+  .apropos-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+  }
+
+  .apropos-text {
+    text-align: left;
+  }
+
+  .apropos-photo {
+    max-width: 400px;
+    border-radius: 8px;
+  }
+}
+
+/* PORTFOLIO GRID */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
   padding: 0 1rem;
 }
 
-.gallery img {
+.grid img {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
+/* SECTION CONTACT */
+#contact a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 footer {
-  background: #000;
+  background-color: #111;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
+  font-size: 0.9rem;
 }
