@@ -256,6 +256,9 @@ footer {
   opacity: 1;
 }
 
+
+/* PORTFOLIO PREVIEW - IMAGE NETTE AU CENTRE, FLOUE SUR LES BORDS */
+
 .project-preview {
   position: absolute;
   top: 50%;
@@ -268,7 +271,6 @@ footer {
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 2;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 .project-preview img {
@@ -280,22 +282,50 @@ footer {
   top: 0;
   left: 0;
   z-index: 1;
-  filter: none;
-}
-
-.project-preview::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  z-index: 2;
-  background: radial-gradient(circle at center, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
-  mix-blend-mode: multiply;
-  pointer-events: none;
+  filter: blur(5px);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
 }
 
 .portfolio-item:hover .project-preview {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
+
+/* AUTRES STYLES DE BASE SIMPLIFIÉS POUR CONTEXTE */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
