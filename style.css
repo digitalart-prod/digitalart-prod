@@ -214,20 +214,22 @@ footer {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
   border-radius: 16px;
 }
 
 .portfolio-item .overlay-text {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
   color: white;
   font-weight: bold;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  text-align: center;
+  pointer-events: none;
 }
 
 .portfolio-item:hover {
@@ -237,9 +239,10 @@ footer {
 
 .portfolio-item:hover img {
   transform: scale(1.05);
+  filter: blur(2px) brightness(0.7);
 }
 
 .portfolio-item:hover .overlay-text {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(-50%, -50%);
 }
