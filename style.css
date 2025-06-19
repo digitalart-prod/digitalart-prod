@@ -128,8 +128,10 @@ section {
   gap: 2rem;
   max-width: 1000px;
   margin: auto;
+  padding: 4rem 2rem;
 }
 
+/* Conteneur cliquable */
 .portfolio-item {
   position: relative;
   overflow: hidden;
@@ -139,32 +141,28 @@ section {
   display: block;
 }
 
+/* Image principale (projet-photo.png / projet-video.png) */
 .portfolio-item img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 16px;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.portfolio-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
+/* Effet au survol sur l'image de fond */
 .portfolio-item:hover img {
   transform: scale(1.05);
+  filter: blur(4px) brightness(0.8);
 }
 
-/* APERCU IMAGE AU SURVOL */
-
-
+/* Bloc d'aperçu rond qui apparaît au survol */
 .project-preview {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
   border-radius: 50%;
@@ -178,6 +176,7 @@ section {
   justify-content: center;
 }
 
+/* Image affichée dans l'aperçu */
 .project-preview img {
   width: 100%;
   height: 100%;
@@ -186,11 +185,14 @@ section {
   position: relative;
   z-index: 2;
   filter: none;
-  mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
-  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+
+  /* Fondu noir sur les bords */
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 
+/* Activation de l'effet au survol */
 .portfolio-item:hover .project-preview {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
