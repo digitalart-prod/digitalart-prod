@@ -142,7 +142,7 @@ section {
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
   padding: 0 1rem;
@@ -196,7 +196,7 @@ footer {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: auto;
@@ -223,8 +223,8 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 30%;
-  height: 30%;
+  width: 40%;
+  height: 40%;
   overflow: hidden;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0.5);
