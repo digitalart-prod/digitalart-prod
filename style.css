@@ -141,14 +141,12 @@ section {
   will-change: transform;
 }
 
-/* Image de fond */
 .portfolio-item img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 20px;
   transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), filter 1.2s ease;
-  will-change: transform, filter;
 }
 
 .portfolio-item:hover img {
@@ -156,7 +154,7 @@ section {
   filter: blur(6px) brightness(0.75);
 }
 
-/* Bloc d'aperçu circulaire */
+/* Conteneur d'aperçu */
 .project-preview {
   position: absolute;
   top: 50%;
@@ -166,29 +164,40 @@ section {
   transform: translate(-50%, -50%) scale(0.8);
   opacity: 0;
   border-radius: 50%;
-  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.8s ease;
+  transition: transform 0.8s ease, opacity 0.8s ease;
   z-index: 2;
   overflow: hidden;
-  backdrop-filter: blur(30px);
-  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: transform, opacity;
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Image nette au centre avec bords flous + fondu noir */
-.project-preview img {
+/* Image floutée avec masque pour bordure */
+.project-preview .blurred {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  filter: none;
+  filter: blur(8px);
   mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+  z-index: 1;
+}
+
+/* Image nette par-dessus */
+.project-preview .sharp {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+  position: relative;
 }
 
 .portfolio-item:hover .project-preview {
