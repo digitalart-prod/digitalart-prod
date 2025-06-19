@@ -161,15 +161,14 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
   border-radius: 50%;
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 2;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 .project-preview img {
@@ -184,6 +183,9 @@ section {
   filter: none;
   mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  background-color: transparent;
 }
 
 .portfolio-item:hover .project-preview {
