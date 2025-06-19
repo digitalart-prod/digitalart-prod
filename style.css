@@ -257,3 +257,47 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.9rem;
 }
+
+/* === PRESTATIONS ATTRACTIVES === */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.section-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+.prestations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.prestation-card {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.prestation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+.prestation-card img {
+  width: 60px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+.prestation-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.prestation-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
