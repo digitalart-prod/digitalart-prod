@@ -6,7 +6,7 @@
   <title>Digital Art Production</title>
 
   <!-- Feuille de style principale -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-portfolio-enhanced.css" />
 
   <!-- AOS CSS (animations on scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -16,8 +16,8 @@
   <nav>
     <div class="nav-container">
       <a href="#accueil">
-  <img src="images/logo.png" alt="Logo Digital Art Production" class="logo" />
-</a>
+        <img src="images/logo.png" alt="Logo Digital Art Production" class="logo" />
+      </a>
       <ul>
         <li><a href="#prestations">Prestations</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
@@ -27,7 +27,7 @@
     </div>
   </nav>
 
-  <!-- PAGE D’ACCUEIL (style spécial) -->
+  <!-- PAGE D’ACCUEIL -->
   <div class="hero home-hero" id="accueil">
     <div class="overlay"></div>
     <div class="hero-text">
@@ -36,50 +36,54 @@
       <a href="#portfolio" class="cta-btn">Découvrir mon travail</a>
     </div>
   </div>
-  
+
   <!-- SECTION PRESTATIONS -->
   <section id="prestations" data-aos="fade-up">
-  <div class="section-content">
-    <h2>Prestations</h2>
-    <p>Je propose des prestations sur mesure en photographie, vidéo et drone, adaptées à vos besoins personnels ou professionnels.</p>
-    <ul class="services-list">
-      <li>📸 Reportages photo professionnels</li>
-      <li>🎬 Réalisation de vidéos promotionnelles</li>
-      <li>🚁 Prises de vue aériennes par drone (y compris FPV)</li>
-      <li>✂️ Montage vidéo, étalonnage, livraison web ou broadcast</li>
-    </ul>
-  </div>
-</section>
+    <div class="section-content">
+      <h2>Prestations</h2>
+      <p>Je propose des prestations sur mesure en photographie, vidéo et drone, adaptées à vos besoins personnels ou professionnels.</p>
+      <ul class="services-list">
+        <li>📸 Reportages photo professionnels</li>
+        <li>🎬 Réalisation de vidéos promotionnelles</li>
+        <li>🚁 Prises de vue aériennes par drone (y compris FPV)</li>
+        <li>✂️ Montage vidéo, étalonnage, livraison web ou broadcast</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- SECTION PORTFOLIO -->
   <section id="portfolio">
-  <div class="portfolio-grid">
-    <a href="photo/index.html" class="portfolio-item">
-      <img src="images/projet-photo.png" alt="Projets Photo">
-      <div class="overlay-text">Projets Photo</div>
-    </a>
-    <a href="video/index.html" class="portfolio-item">
-      <img src="images/projet-video.png" alt="Projets Vidéo">
-      <div class="overlay-text">→ Découvrir les projets</div>
-    </a>
-  </div>
-</section>
+    <div class="portfolio-grid">
+      <a href="photo/index.html" class="portfolio-item">
+        <img src="images/projet-photo.png" alt="Projets Photo">
+        <div class="project-preview">
+          <img src="images/apercu-photo.jpg" alt="Aperçu projets photo">
+        </div>
+      </a>
+      <a href="video/index.html" class="portfolio-item">
+        <img src="images/projet-video.png" alt="Projets Vidéo">
+        <div class="project-preview">
+          <img src="images/apercu-video.jpg" alt="Aperçu projets vidéo">
+        </div>
+      </a>
+    </div>
+  </section>
 
   <!-- SECTION À PROPOS -->
   <section id="apropos" class="apropos" data-aos="fade-up">
-  <div class="apropos-container">
-    <div class="apropos-photo-container">
-      <img src="images/profic-pic.jpg" alt="Photo de Victor" class="apropos-photo" />
+    <div class="apropos-container">
+      <div class="apropos-photo-container">
+        <img src="images/profic-pic.jpg" alt="Photo de Victor" class="apropos-photo" />
+      </div>
+      <div class="apropos-text">
+        <h2>À propos</h2>
+        <p>
+          Je m'appelle Victor. Passionné par la vidéo, le drone et l’exploration, je capture des instants vrais et visuellement forts. 
+          J’ai appris en autodidacte, caméra à la main et sac sur le dos. Aujourd’hui, je transforme mes voyages, mes rencontres et mes projets clients en images percutantes, sincères et naturelles.
+        </p>
+      </div>
     </div>
-    <div class="apropos-text">
-      <h2>À propos</h2>
-      <p>
-        Je m'appelle Victor. Passionné par la vidéo, le drone et l’exploration, je capture des instants vrais et visuellement forts. 
-        J’ai appris en autodidacte, caméra à la main et sac sur le dos. Aujourd’hui, je transforme mes voyages, mes rencontres et mes projets clients en images percutantes, sincères et naturelles.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- SECTION CONTACT -->
   <section id="contact" data-aos="fade-up">
@@ -108,7 +112,7 @@
     });
   </script>
 
-  <!-- AOS JS (animations on scroll) -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
