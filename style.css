@@ -135,48 +135,50 @@ section {
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border-radius: 20px;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
   cursor: pointer;
   display: block;
+  will-change: transform;
 }
 
-/* Image principale (projet-photo.png / projet-video.png) */
+/* Image de fond */
 .portfolio-item img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 16px;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 20px;
+  transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1), filter 1s ease;
 }
 
-/* Effet au survol sur l'image de fond */
+/* Effet fond au survol */
 .portfolio-item:hover img {
-  transform: scale(1.05);
-  filter: blur(4px) brightness(0.8);
+  transform: scale(1.08);
+  filter: blur(6px) brightness(0.75);
 }
 
-/* Bloc d'aperçu rond qui apparaît au survol */
+/* Bloc d'aperçu */
 .project-preview {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 70%;
   height: 70%;
-  transform: translate(-50%, -50%) scale(0.5);
+  transform: translate(-50%, -50%) scale(0.8);
   opacity: 0;
   border-radius: 50%;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.8s ease;
   z-index: 2;
   overflow: hidden;
-  backdrop-filter: blur(25px);
-  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(30px);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  will-change: transform, opacity;
 }
 
-/* Image affichée dans l'aperçu */
+/* Image centrale dans l'aperçu */
 .project-preview img {
   width: 100%;
   height: 100%;
@@ -185,14 +187,12 @@ section {
   position: relative;
   z-index: 2;
   filter: none;
-
-  /* Fondu noir sur les bords */
   mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
 }
 
-/* Activation de l'effet au survol */
+/* Apparition fluide au survol */
 .portfolio-item:hover .project-preview {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
