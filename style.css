@@ -122,7 +122,7 @@ section {
 }
 
 /* PORTFOLIO */
-.portfolio-grid {
+portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
@@ -137,7 +137,7 @@ section {
   border-radius: 20px;
   cursor: pointer;
   display: block;
-  transition: transform 0.5s ease;
+  transition: all 0.6s ease;
 }
 
 .portfolio-item img {
@@ -145,13 +145,20 @@ section {
   height: auto;
   display: block;
   border-radius: 20px;
-  transition: transform 0.6s ease, filter 0.6s ease, mask-image 0.6s ease;
-  will-change: transform, filter, mask-image;
+  transition: all 0.6s ease;
+  filter: brightness(1);
+  mask-image: none;
+}
+
+.portfolio-item:hover {
+  padding: 10px;
+  background-color: transparent;
 }
 
 .portfolio-item:hover img {
-  transform: scale(1.2);
-  filter: brightness(0.6) blur(2px);
+  width: 115%;
+  height: auto;
+  filter: blur(2px) brightness(0.6);
   mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
   -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
 }
