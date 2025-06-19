@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Art Production</title>
 
-  <!-- Feuille de style principale -->
- <link rel="stylesheet" href="style.css">
-
-  <!-- AOS CSS (animations on scroll) -->
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- MENU AVEC LOGO -->
+
+  <!-- NAVIGATION -->
   <nav>
     <div class="nav-container">
       <a href="#accueil">
@@ -27,7 +26,7 @@
     </div>
   </nav>
 
-  <!-- PAGE D’ACCUEIL -->
+  <!-- ACCUEIL -->
   <div class="hero home-hero" id="accueil">
     <div class="overlay"></div>
     <div class="hero-text">
@@ -37,7 +36,7 @@
     </div>
   </div>
 
-  <!-- SECTION PRESTATIONS -->
+  <!-- PRESTATIONS -->
   <section id="prestations" data-aos="fade-up">
     <div class="section-content">
       <h2>Prestations</h2>
@@ -51,32 +50,30 @@
     </div>
   </section>
 
-  <!-- SECTION PORTFOLIO -->
+  <!-- PORTFOLIO -->
   <section id="portfolio">
- <div class="project-preview">
-  <img src="images/photo-miniature.jpg" alt="Aperçu">
-</div>
+    <div class="portfolio-grid">
 
-    <!-- Projet Photo -->
-    <a href="photo/index.html" class="portfolio-item">
-      <img src="images/projet-photo.png" alt="Projets Photo">
-      <div class="project-preview">
-        <img src="images/apercu-photo.png" alt="Aperçu projets photo">
-      </div>
-    </a>
+      <!-- Projets Photo -->
+      <a href="photo/index.html" class="portfolio-item">
+        <img src="images/projet-photo.png" alt="Projets Photo">
+        <div class="project-preview">
+          <img src="images/photo-miniature.jpg" alt="Aperçu projets photo">
+        </div>
+      </a>
 
-    <!-- Projet Vidéo -->
-    <a href="video/index.html" class="portfolio-item">
-      <img src="images/projet-video.png" alt="Projets Vidéo">
-      <div class="project-preview">
-        <img src="images/apercu-video.png" alt="Aperçu projets vidéo">
-      </div>
-    </a>
+      <!-- Projets Vidéo -->
+      <a href="video/index.html" class="portfolio-item">
+        <img src="images/projet-video.png" alt="Projets Vidéo">
+        <div class="project-preview">
+          <img src="images/photo-miniature.jpg" alt="Aperçu projets vidéo">
+        </div>
+      </a>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-  <!-- SECTION À PROPOS -->
+  <!-- À PROPOS -->
   <section id="apropos" class="apropos" data-aos="fade-up">
     <div class="apropos-container">
       <div class="apropos-photo-container">
@@ -92,7 +89,7 @@
     </div>
   </section>
 
-  <!-- SECTION CONTACT -->
+  <!-- CONTACT -->
   <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>📩 <a href="mailto:contact@digitalart-production.fr">contact@digitalart-production.fr</a></p>
@@ -119,13 +116,11 @@
     });
   </script>
 
-  <!-- AOS JS -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
+
 </body>
 </html>
