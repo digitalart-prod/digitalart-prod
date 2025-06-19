@@ -1,14 +1,18 @@
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+
+body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #1f1f1f;
   color: white;
-  scroll-behavior: smooth;
 }
+
+/* NAVIGATION */
 nav {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -16,6 +20,7 @@ nav {
   top: 0;
   z-index: 1000;
 }
+
 .nav-container {
   max-width: 1200px;
   margin: auto;
@@ -24,14 +29,17 @@ nav {
   justify-content: space-between;
   padding: 0.8rem 2rem;
 }
+
 .logo {
   height: 40px;
 }
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -39,9 +47,12 @@ nav ul li a {
   font-size: 1rem;
   transition: color 0.3s ease;
 }
+
 nav ul li a:hover {
   color: #ffcc00;
 }
+
+/* HERO */
 .home-hero {
   height: 100vh;
   background-image: url('images/drone-shot-1.jpg');
@@ -52,6 +63,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
 }
+
 .home-hero .overlay {
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -60,6 +72,7 @@ nav ul li a:hover {
   top: 0;
   left: 0;
 }
+
 .hero-text {
   position: relative;
   color: white;
@@ -67,15 +80,18 @@ nav ul li a:hover {
   z-index: 1;
   padding: 2rem;
 }
+
 .hero-text h1 {
   font-size: 3.5rem;
   letter-spacing: 1px;
 }
+
 .hero-text p {
   font-size: 1.5rem;
   margin-top: 1rem;
   opacity: 0.85;
 }
+
 .cta-btn {
   margin-top: 1.5rem;
   display: inline-block;
@@ -87,220 +103,31 @@ nav ul li a:hover {
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
+
 .cta-btn:hover {
   background-color: #e6b800;
 }
+
+/* SECTIONS */
 section {
   width: 100%;
   padding: 5rem 2rem;
   background-color: #1f1f1f;
   color: white;
 }
+
 .section-content {
   max-width: 1200px;
   margin: 0 auto;
 }
-.apropos-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
-.apropos-photo-container {
-  flex: 1;
-  max-width: 400px;
-}
-.apropos-photo {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-}
-.apropos-text {
-  flex: 2;
-  text-align: center;
-}
-.apropos-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.apropos-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-@media (min-width: 900px) {
-  .apropos-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .apropos-text {
-    text-align: left;
-    padding-left: 2rem;
-  }
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 0 1rem;
-}
-.grid img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-.services-list {
-  margin-top: 2rem;
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: center;
-}
-.services-list li {
-  margin-bottom: 0.5rem;
-}
-@media (min-width: 900px) {
-  .services-list {
-    text-align: left;
-    max-width: 800px;
-    margin: 2rem auto 0;
-  }
-}
-#contact a {
-  color: #ffcc00;
-  text-decoration: none;
-}
-#contact a:hover {
-  text-decoration: underline;
-}
-footer {
-  background-color: #1f1f1f;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-}
 
-
-
-/* === Portfolio Section améliorée === */
-#portfolio {
-  width: 100%;
-  padding: 5rem 2rem;
-  background-color: #1f1f1f;
-}
-
+/* PORTFOLIO */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: auto;
-}
-
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  cursor: pointer;
-  display: block;
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s ease, filter 0.5s ease;
-  border-radius: 16px;
-}
-
-.project-preview {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 80%;
-  border-radius: 16px;
-  overflow: hidden;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 2;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-}
-
-.project-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.portfolio-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.portfolio-item:hover img {
-  transform: scale(1.05);
-  filter: blur(4px) brightness(0.6);
-}
-
-.portfolio-item:hover .project-preview {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
-
-/* PORTFOLIO PREVIEW - IMAGE NETTE AU CENTRE, FLOUE SUR LES BORDS */
-
-.project-preview {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  height: 80%;
-  transform: translate(-50%, -50%) scale(0.5);
-  opacity: 0;
-  border-radius: 50%;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.project-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  filter: blur(5px);
-  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
-}
-
-.portfolio-item:hover .project-preview {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
-
-/* AUTRES STYLES DE BASE SIMPLIFIÉS POUR CONTEXTE */
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: auto;
-  padding: 4rem 2rem;
 }
 
 .portfolio-item {
@@ -329,3 +156,105 @@ footer {
   transform: scale(1.05);
 }
 
+/* APERCU IMAGE AU SURVOL */
+.project-preview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  border-radius: 50%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.project-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: none;
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+}
+
+.portfolio-item:hover .project-preview {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* A PROPOS */
+.apropos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.apropos-photo-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.apropos-photo {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.apropos-text {
+  flex: 2;
+  text-align: center;
+}
+
+.apropos-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.apropos-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 900px) {
+  .apropos-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .apropos-text {
+    text-align: left;
+    padding-left: 2rem;
+  }
+}
+
+/* CONTACT */
+#contact a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
