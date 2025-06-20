@@ -299,51 +299,69 @@ footer {
 }
 
 .prestations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
 }
 
 .prestation-card {
   position: relative;
+  width: 350px;
+  height: 350px;
   background-size: cover;
   background-position: center;
-  height: 300px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  cursor: pointer;
+  flex-shrink: 0;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .prestation-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+  transform: scale(1.08);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+}
+
+.prestation-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.prestation-card:hover::before {
+  opacity: 1;
 }
 
 .prestation-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.7); /* assombrissement fort */
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
   padding: 2rem;
+  color: white;
 }
 
 .prestation-overlay h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #fff;
 }
 
 .prestation-overlay p {
   font-size: 1rem;
-  line-height: 1.5;
   color: #ddd;
+  line-height: 1.5;
 }
