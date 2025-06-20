@@ -147,9 +147,9 @@ section::after {
 .portfolio-grid {
   display: flex;
   justify-content: center;
-  gap: 3rem; /* plus d'espace entre les deux */
+  gap: 3rem;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   padding: 4rem 2rem;
 }
@@ -159,8 +159,8 @@ section::after {
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   flex-shrink: 0;
 }
 
@@ -214,6 +214,7 @@ section::after {
   color: black;
   transform: scale(1.05);
 }
+
 
 /* A PROPOS */
 .apropos-container {
