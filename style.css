@@ -155,12 +155,13 @@ section::after {
   height: auto;
   display: block;
   border-radius: 20px;
-  transition: width 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  will-change: transform, filter;
   filter: brightness(1);
 }
 
 .portfolio-item:hover img {
-  width: 105%;
+  transform: scale(1.05); /* agrandissement uniforme */
   filter: blur(4px) brightness(0.6);
 }
 
