@@ -446,10 +446,16 @@ footer {
 
 
 #instagram {
+ #instagram {
   background-color: #1f1f1f;
   padding: 4rem 2rem;
-  color: white;
   text-align: center;
+}
+
+.instagram-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .instagram-feed iframe {
@@ -457,7 +463,5 @@ footer {
   max-width: 900px;
   height: 400px;
   border-radius: 12px;
-  margin: auto;
-  display: block;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
