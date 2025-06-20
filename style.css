@@ -156,8 +156,8 @@ section::after {
 
 .portfolio-item {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 380px;
+  height: 380px;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -215,14 +215,14 @@ section::after {
 }
 
 .project-button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   background-color: rgba(255, 255, 255, 0.1);
   color: white;
   border: 1px solid white;
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
   backdrop-filter: blur(3px);
 }
@@ -232,7 +232,6 @@ section::after {
   color: black;
   transform: scale(1.05);
 }
-
 
 /* A PROPOS */
 .apropos-container {
