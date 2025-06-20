@@ -132,7 +132,6 @@ section {
   color: white;
 }
 
-/* === SÉPARATEUR ENTRE SECTIONS === */
 section::after {
   content: "";
   position: absolute;
@@ -384,3 +383,16 @@ footer {
   color: #ddd;
   line-height: 1.5;
 }
+/* === SÉPARATEUR VISUEL ENTRE PRESTATIONS ET PORTFOLIO === */
+
+#prestations::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.15), transparent);
+  transform: translateX(-50%);
+}
+
