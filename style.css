@@ -1,3 +1,5 @@
+
+/* === RESET & BASE === */
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +51,7 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* === SECTIONS & SÉPARATEUR === */
+/* === SECTIONS & SÉPARATEURS === */
 section {
   position: relative;
   padding: 5rem 2rem;
@@ -67,7 +69,7 @@ section::after {
   transform: translateX(-50%);
 }
 
-/* === PORTFOLIO AVEC ZOOM + FLOU === */
+/* === PORTFOLIO : ZOOM + FLOU === */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -129,12 +131,11 @@ section::after {
   transform: scale(1.05);
 }
 
-/* === PRESTATIONS FOND IMAGE + OVERLAY === */
+/* === PRESTATIONS IMAGE FOND + OVERLAY === */
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
 }
 .section-intro {
   text-align: center;
