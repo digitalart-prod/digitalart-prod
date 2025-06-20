@@ -19,6 +19,7 @@ nav {
   width: 100%;
   top: 0;
   z-index: 1000;
+  padding: 0.4rem 0;
 }
 
 .nav-container {
@@ -27,24 +28,24 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.8rem 2rem;
+  padding: 0.4rem 2rem;
 }
 
 .logo {
-  height: 60px;
+  height: 32px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
