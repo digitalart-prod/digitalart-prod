@@ -329,13 +329,15 @@ footer {
   position: relative;
   width: 350px;
   height: 350px;
-  background-size: cover;
-  background-position: center;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
   flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: #1f1f1f;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .prestation-card:hover {
@@ -347,15 +349,16 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0,0,0,0.45);
-  backdrop-filter: blur(2px);
-  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(1px);
+  opacity: 1;
   transition: opacity 0.4s ease;
   z-index: 1;
 }
 
 .prestation-card:hover::before {
   opacity: 1;
+  backdrop-filter: blur(2px);
 }
 
 .prestation-overlay {
