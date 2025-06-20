@@ -159,8 +159,8 @@ section::after {
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   flex-shrink: 0;
 }
 
