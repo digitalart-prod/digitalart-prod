@@ -132,16 +132,18 @@ section {
   color: white;
 }
 
+/* === SÉPARATEUR ENTRE SECTIONS === */
 section::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 80%;
+  width: 90%;
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
   transform: translateX(-50%);
 }
+
 
 /* PORTFOLIO */
 .portfolio-grid {
@@ -319,10 +321,11 @@ footer {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 1200px;
   margin: auto;
   padding: 4rem 2rem;
+  overflow-x: auto;
 }
 
 .prestation-card {
@@ -332,32 +335,29 @@ footer {
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  flex-shrink: 0;
   background-size: cover;
   background-position: center;
   background-color: #1f1f1f;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.prestation-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
 }
 
 .prestation-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.6); /* assombrissement plus fort */
   backdrop-filter: blur(1px);
-  opacity: 1;
-  transition: opacity 0.4s ease;
   z-index: 1;
+  transition: backdrop-filter 0.4s ease;
 }
 
+.prestation-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+}
 .prestation-card:hover::before {
-  opacity: 1;
   backdrop-filter: blur(2px);
 }
 
@@ -379,7 +379,6 @@ footer {
   margin-bottom: 0.5rem;
   color: #fff;
 }
-
 .prestation-overlay p {
   font-size: 1rem;
   color: #ddd;
