@@ -458,11 +458,11 @@ footer {
   align-items: center;
 }
 
-.instagram-feed iframe {
+.instagram-feed iframe.lightwidget-widget {
+  max-width: 1200px;
   width: 100%;
-  max-width: 1300px;
-  height: 400px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  height: 500px;
+  margin: auto;
+  display: block;
+  border: none;
 }
-  
